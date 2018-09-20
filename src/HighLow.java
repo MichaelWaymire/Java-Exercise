@@ -7,10 +7,9 @@ public class HighLow {
 
         //Variables
         Random randomNumber = new Random();
-        Scanner kbd = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int computerValue = randomNumber.nextInt(100);
         int numberOfTries = 0;
-        int success = 0;
         int guess = 0;
 
 
@@ -19,7 +18,7 @@ public class HighLow {
             numberOfTries = 0;
             while (true) {
                 System.out.println("Pick a number between 1 and 100: ");
-                guess = kbd.nextInt();
+                guess = scanner.nextInt();
                 numberOfTries++;
 
                 if (guess < 1 || guess > 100) System.out.println("Not what i'm looking for! Try again");
@@ -35,7 +34,7 @@ public class HighLow {
 
             System.out.println("Do you want to play again? (1:Yes/2:No)");
             // if input is not yes leave second loop
-            if(kbd.nextInt() != 1) break;
+            if(scanner.nextInt() != 1) break;
         }
 
 
