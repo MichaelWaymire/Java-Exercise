@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class SandBox {
-    public static void main(String[] args){
+     public static void main(String[] args) {
+             int x = 5 * 4 % 3;
+             System.out.println(x);
 //        byte veryShort = -128;
 //        // byte = -128 to 127
 //        short regShort = 32767;
@@ -33,12 +35,17 @@ public class SandBox {
 //        System.out.println(booleanVar);
 //        System.out.println(stringVar);
 
-        Scanner bananaScanner = new Scanner(System.in);
-        System.out.println("What is your First Name");
-        String firstName = bananaScanner.next();
-        System.out.println("what is your Last name?");
-        String lastName = bananaScanner.next();
-        System.out.format("Hello %s %s", firstName, lastName);
-    }
+//        Scanner bananaScanner = new Scanner(System.in);
+//        System.out.println("What is your First Name");
+//        String firstName = bananaScanner.next();
+//        System.out.println("what is your Last name?");
+//        String lastName = bananaScanner.next();
+//        System.out.format("Hello %s %s", firstName, lastName);
 
+
+
+
+
+
+}
 }
