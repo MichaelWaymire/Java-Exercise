@@ -3,47 +3,91 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner;
 
-    public Input(){ scanner = new Scanner(System.in).useDelimiter("\n");
+    private Scanner scan;
 
+    // constructor runs whenever we see "new Input()"
+    public Input() {
+        scan = new Scanner(System.in).useDelimiter("\n");
     }
 
-
-
-    String getString(){
-        return scanner.next();
+    public String getString() {
+        return scan.next();
     }
 
-
-    boolean yesNo(){
-        System.out.println("please input yes or y to continue");
-        String userInput = getString();
-        return yesNo();
-
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
     }
-//
-//
-    int getInt(int min, int max){
-        System.out.println("Please give me a number" + min + " and "
-        + max);
+
+    public int getInt() {
+        return scan.nextInt();
+    }
+
+    public int getInt(int min, int max) {
+        System.out.println("Please input an integer between " + min + " and " + max);
         return getInt();
     }
-//
-//
-    int getInt(){
-        return scanner.nextInt();
+
+    public double getDouble() {
+        return scan.nextDouble();
     }
-//
-//
-    double getouble(double min, double max){
-        System.out.println("please input a number between " + min +
-        " and " + max);
+
+    public double getDouble(double min, double max) {
+        System.out.println("Please input an integer between " + min + " and " + max);
         return getDouble();
     }
-//
-//
-    double getDouble(){
-        return scanner.nextInt();
+
+    public boolean yesNo() {
+        System.out.println("Please input yes or y to continue");
+        String userInput = getString();
+        return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
+
+    //My Attempt
+//    private Scanner scanner;
+//
+//    public Input(){ scanner = new Scanner(System.in).useDelimiter("\n");
+//
+//    }
+//
+//    public String getString(){
+//        return scanner.next();
+//    }
+//
+//    public String getString(){
+//        return scanner.next();
+//    }
+//
+//
+//    boolean yesNo(){
+//        System.out.println("please input yes or y to continue");
+//        String userInput = getString();
+//        return yesNo();
+//
+//    }
+////
+////
+//    int getInt(int min, int max){
+//        System.out.println("Please give me a number" + min + " and "
+//        + max);
+//        return getInt();
+//    }
+////
+////
+//    int getInt(){
+//        return scanner.nextInt();
+//    }
+////
+////
+//    public double getDouble(double min, double max){
+//        System.out.println("please input a number between " + min +
+//        " and " + max);
+//        return getDouble();
+//    }
+////
+////
+//    double getDouble(){
+//        return scanner.nextInt();
+//    }
 }
