@@ -58,7 +58,7 @@ public class ArraysExercises {
 //        }
 
         //add new person to new array
-        newArray[newArray.length - 1] = new Person(person);
+            ;
 
 
         //create new array
