@@ -4,6 +4,6 @@ public interface Measurable {
 
     double getPerimeter();
 
-    double getArea();
+    double getArea(double i);
 
 }

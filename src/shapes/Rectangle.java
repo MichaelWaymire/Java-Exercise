@@ -5,15 +5,6 @@ public  class Rectangle extends Quadrilateral implements Measurable {
         super(length, width);
     }
 
-    @Override
-    public void setLength(int length) {
-
-    }
-
-    @Override
-    public void setWidth(int width) {
-
-    }
 
     @Override
     public double getPerimeter() {
@@ -21,8 +12,18 @@ public  class Rectangle extends Quadrilateral implements Measurable {
     }
 
     @Override
-    public double getArea() {
+    public double getArea(double i) {
         return 0;
+    }
+
+    @Override
+    public void setLength(double length) {
+
+    }
+
+    @Override
+    public void setWidth(double width) {
+
     }
 
 
