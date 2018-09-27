@@ -6,6 +6,8 @@ public class Input {
 
     private Scanner scan;
 
+
+
     // constructor runs whenever we see "new Input()"
     public Input() {
         scan = new Scanner(System.in).useDelimiter("\n");
@@ -21,13 +23,25 @@ public class Input {
     }
 
     public int getInt() {
+
         return scan.nextInt();
     }
 
-    public int getInt(int min, int max) {
-        System.out.println("Please input an integer between " + min + " and " + max);
-        return getInt();
+    public int getInt(String a, int s) {
+        try {
+            int usernum = Integer.parseInt(this.scan.nextLine());
+            System.out.println("Hey its a number!");
+            return usernum;
+        } catch (NumberFormatException e) {
+            System.out.println("Try again! This time with an interger");
+            return getInt();
+        }
+
+        //        System.out.println("Please input an integer between " + min + " and " + max);
+//        return getInt();
     }
+
+
 
     public double getDouble() {
         return scan.nextDouble();
