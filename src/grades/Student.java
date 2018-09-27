@@ -5,7 +5,7 @@ public class Student {
 
     //Created Private Property that is a string
     //called StudentNames
-    private String studentNames;
+    private String studentName;
 
     //Created Private ArrayList<Integer> called
     //grades
@@ -14,14 +14,19 @@ public class Student {
 
     //This constructor sets the studentName and
     //initializes a empty ArrayList<Interger>
-    public Student(String studentNames, ArrayList<Integer> grades) {
-        this.studentNames = studentNames;
-        this.grades = grades;
+    public Student(String studentName) {
+        this.studentName = studentName;
+        this.grades = new ArrayList<>();
     }
 
     // returns the student's name
     public String getStudentNames() {
-        return studentNames;
+        return studentName;
+    }
+    @Override
+    public String toString(){
+        return "Name: " + this.studentName + "\n" +
+                "Grades Average: " + this.getGradeAverage() + "\n";
     }
     //adds the given grade to the grades property
     public void addGrade(int grade){
@@ -47,6 +52,8 @@ public class Student {
         return total / this.grades.size();
     }
 
+
+
     public static void main(String[] args) {
 
 
@@ -59,7 +66,7 @@ public class Student {
 //        cody.addGrade(75);
 //        cody.addGrade(90);
 //        System.out.println(cody.grades);
-//
+
 //        //Second Student
 //        Student two = new Student("Lily");
 //        System.out.println(two.getStudentNames());
