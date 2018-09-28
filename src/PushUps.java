@@ -41,14 +41,16 @@ public class PushUps {
 //        return null;
 //    }
 //
-//    public static boolean sleepIn(boolean weekday,boolean vacation) {
-//        if(!weekday || vacation){
-//            System.out.println("Sleep In");
-//            return true;
-//        }
-//        System.out.println("Not today!");
-//        return false;
-//    }
+    public static boolean sleepIn(boolean weekday,boolean vacation) {
+        if(!weekday || vacation){
+            System.out.println("Sleep In");
+            return true;
+        }
+        System.out.println("Not today!");
+        return false;
+    }
+
+
 //
 ////    Given an int n, return the absolute difference between n and 21, except
 ////    return double the absolute difference if n is over 21.
@@ -84,9 +86,9 @@ public class PushUps {
 
 
 
-    public static void main(String[] args) {
-
-        input.getInt("Hello", 5);
+//    public static void main(String[] args) {
+//
+//        input.getInt("Hello", 5);
 //        System.out.println(input.getInt(523432234,10));
 
 //        String[] array = new String[10];
@@ -99,5 +101,5 @@ public class PushUps {
 //            System.out.println(e);
 //        }
 //        System.out.println("Do SOMETHING");
+
     }
-}
