@@ -41,14 +41,14 @@ public class PushUps {
 //        return null;
 //    }
 //
-    public static boolean sleepIn(boolean weekday,boolean vacation) {
-        if(!weekday || vacation){
-            System.out.println("Sleep In");
-            return true;
-        }
-        System.out.println("Not today!");
-        return false;
-    }
+//    public static boolean sleepIn(boolean weekday,boolean vacation) {
+//        if(!weekday || vacation){
+//            System.out.println("Sleep In");
+//            return true;
+//        }
+//        System.out.println("Not today!");
+//        return false;
+//    }
 
 
 //
@@ -102,4 +102,9 @@ public class PushUps {
 //        }
 //        System.out.println("Do SOMETHING");
 
+    public static void main(String[] args) {
+
     }
+
+}
+

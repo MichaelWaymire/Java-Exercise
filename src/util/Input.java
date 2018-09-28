@@ -1,10 +1,12 @@
 package util;
 import java.util.Scanner;
 
+
 public class Input {
 
 
     private Scanner scan;
+
 
 
 
@@ -24,18 +26,20 @@ public class Input {
 
     public int getInt() {
 
-        return scan.nextInt();
-    }
-
-    public int getInt(String a, int s) {
+        System.out.println("Please input a number");
+        int input;
         try {
-            int usernum = Integer.parseInt(this.scan.nextLine());
-            System.out.println("Hey its a number!");
-            return usernum;
-        } catch (NumberFormatException e) {
-            System.out.println("Try again! This time with an interger");
+            input = Integer.valueOf(getString());
+            return input;
+        }catch (NumberFormatException e) {
+            System.out.println("Input is not valid");
             return getInt();
         }
+    }
+
+    public int getInt(int min, int max) {
+        System.out.println("Please input an integer between " + min + " and " + max);
+        return getInt();
 
         //        System.out.println("Please input an integer between " + min + " and " + max);
 //        return getInt();
@@ -44,7 +48,16 @@ public class Input {
 
 
     public double getDouble() {
-        return scan.nextDouble();
+        System.out.println("Please input a number");
+        int input;
+
+        try {
+            input = Integer.valueOf(getString());
+            return input;
+        }catch (NumberFormatException e) {
+            System.out.println("Input is not valid");
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
