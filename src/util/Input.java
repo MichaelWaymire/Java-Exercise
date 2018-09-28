@@ -60,6 +60,10 @@ public class Input {
         }
     }
 
+
+
+
+
     public double getDouble(double min, double max) {
         System.out.println("Please input an integer between " + min + " and " + max);
         return getDouble();
