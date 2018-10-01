@@ -1,4 +1,4 @@
-package ContactsManager;
+package util;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.Arrays;
