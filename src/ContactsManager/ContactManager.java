@@ -22,10 +22,10 @@ public class ContactManager {
         String name = input.getString("Please enter a name");
         return name;
     }
-    //Allows user imput to add numbers to the file.
+    //Allows user input to add numbers to the file.
     public static String addNumber() {
         String num = input.getString("Please provide a phone number: ");
-        if (num.length() == 10) {
+        if (num.length() == 10 || num.length() == 7) {
             return num;
         } else {
             return addNumber();
@@ -34,9 +34,9 @@ public class ContactManager {
     }
         // Removes a contact from the list
         public static void removeContact(){
-            String delteContact = input.getString("Please enter who you wish to remove");
+            String deleteContact = input.getString("Please enter who you wish to remove");
             for(String dc: contacts) {
-                if( delteContact.equalsIgnoreCase(dc.split(" ")[0])){
+                if( deleteContact.equalsIgnoreCase(dc.split(" ")[0])){
                     contacts.remove(dc);
                     return;
                 }
@@ -71,7 +71,8 @@ public class ContactManager {
             int userInput = input.getInt();
 
             if (userInput == 1) {
-                System.out.printf("%-10s | %-12s\n", "Name", "Phone Number");
+                System.out.printf("%-10s | %-12s |\n", "Name", "Phone Number");
+                System.out.println("---------------------------");
                 for(String line: contacts) {
                     String[] info = line.split(" ");
                     System.out.printf("%-10s | %-12s\n", info[0], info[1]);
